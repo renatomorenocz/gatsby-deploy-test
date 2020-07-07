@@ -7,6 +7,13 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
+      PROJECT_ID: ${{ secrets.PROJECT_ID }}
+      PRIVATE_KEY_ID: ${{ secrets.PRIVATE_KEY_ID }}
+      PRIVATE_KEY: ${{ secrets.PRIVATE_KEY }}
+      CLIENT_EMAIL: ${{ secrets.CLIENT_EMAIL }}
+      CLIENT_ID: ${{ secrets.CLIENT_ID }}
     steps:
       - uses: actions/checkout@v1
       - uses: enriikke/gatsby-gh-pages-action@v2
